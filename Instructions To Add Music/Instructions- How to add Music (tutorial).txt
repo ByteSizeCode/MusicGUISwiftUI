@@ -13,9 +13,9 @@ Album(title: "Hotel California", songList: ["Hotel California","New Kid in Town"
 
 ]
 
-2) Copy the cover images from this directory (a1cover.jpg a2cover.png,etc) to the Assets.xcassets folder found in the open Xcode project (must be copied from inside the open Xcode project). Or add your own to the folder (if you do this remember to change the album's declaration in list so it has the correct "coverImgName" parameter)
+2) Copy the cover images from this directory (a1cover.jpg a2cover.png,etc) to the Assets.xcassets folder found in the open Xcode project (must be copied into the directory found inside the open Xcode project and NOT into that same directory from Finder). Or add your own to the folder (if you do this remember to change the album's declaration in list so it has the correct "coverImgName" parameter)
 
-3) Add the song files to the directory "Music files" found in the open Xcode project(must be copied from inside the open Xcode project), or- simply rename the royalty-free mp3 files already there to: Yellow Submarine, Only a Northern Song, All Together Now, Hey Bulldog, and All You Need Is Love, etc
+3) Add the song files to the directory "Music files" found in the open Xcode project(must be copied into the directory found inside the open Xcode project and NOT into that same directory from Finder), or- simply rename the royalty-free mp3 files already there to: Yellow Submarine, Only a Northern Song, All Together Now, Hey Bulldog, and All You Need Is Love, etc
 
 4) Add missing data for other desired albums as necessary
 
