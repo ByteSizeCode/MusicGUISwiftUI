@@ -1,6 +1,6 @@
-Follow these instructions to test the app:
+Follow these instructions if you prefer the app to have real albums over generic ones:
 
-1) Replace list from AlbumNamesList.swift with the following:
+1) Replace list from AlbumNamesList.swift with the following, or something like the following:
 
 //Add cells here
 let library = [
@@ -9,8 +9,10 @@ let library = [
      Album(title: "Hotel California", songList: ["Royalty-Free4", "Royalty-Free5"], artist: "The Eagles", genreTags: ["Rock"], id: "2", description: "This is a description of album 2.\nAnd a new line here.", selftext_html: nil, coverImgName: "a2cover", subtitle: "The Eagles", category: "notused", score: 1000, num_comments: 50, stickied: false, created_utc: Date().timeIntervalSince1970 - 100, preview: nil, is_original_content: false, spoiler: false, replies: nil)
 ]
 
-2) Copy the cover images from this directory (a1cover.jpg and a2cover.png) to the Assets.xcassets folder found in the open Xcode project
+2) Copy the cover images from this directory (a1cover.jpg and a2cover.png) to the Assets.xcassets folder found in the open Xcode project. Or add your own to the folder (if you do this remember to change the album's declaration in list so it has the correct "coverImgName" parameter)
 
 3) Add the song files to the directory "Music files," or- simply rename the royalty-free mp3 files already there to: Yellow Submarine, Only a Northern Song, All Together Now, Hey Bulldog, and All You Need Is Love
 
 4) Add missing data for other desired albums as necessary
+
+Note: Each album declaration in list must have a different id (parameter "id") to show up as expected.
