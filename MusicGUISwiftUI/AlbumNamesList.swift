@@ -14,11 +14,20 @@ struct AlbumNamesList: View {
     let category: String
     let sortBy: SortBy
     
-    //Add cells here
-    let library = [
-        Album(title: "Album 1", songList: ["Royalty-Free1", "Royalty-Free2"], artist: "Author here.", genreTags: ["pop"], id: "0", description: "This is a description of album 1.\nAnd a new line here.", selftext_html: nil, coverImgName: "a1cover", subtitle: "Subtitle here", category: "notused", score: 1000, num_comments: 50, stickied: false, created_utc: Date().timeIntervalSince1970 - 100, preview: nil, is_original_content: false, spoiler: false, replies: nil),
-        Album(title: "Album 2", songList: ["Royalty-Free4", "Royalty-Free5"], artist: "Author here.", genreTags: ["rock","other tag"], id: "1", description: "This is a description of album 2.\nAnd a new line here.", selftext_html: nil, coverImgName: "a2cover", subtitle: "Subtitle here", category: "notused", score: 1000, num_comments: 50, stickied: false, created_utc: Date().timeIntervalSince1970 - 100, preview: nil, is_original_content: false, spoiler: false, replies: nil)
-    ]
+    /*Alternative option for more generic albums:*/
+//    let library = [
+//        Album(title: "Album 1", songList: ["Royalty-Free1", "Royalty-Free2"], artist: "Author here.", genreTags: ["pop"], id: "0", description: "This is a description of album 1.\nAnd a new line here.", selftext_html: nil, coverImgName: "generic_a1cover", subtitle: "Subtitle here", category: "notused", score: 1000, num_comments: 50, stickied: false, created_utc: Date().timeIntervalSince1970 - 100, preview: nil, is_original_content: false, spoiler: false, replies: nil),
+//        Album(title: "Album 2", songList: ["Royalty-Free4", "Royalty-Free5"], artist: "Author here.", genreTags: ["rock","other tag"], id: "1", description: "This is a description of album 2.\nAnd a new line here.", selftext_html: nil, coverImgName: "generic_a2cover", subtitle: "Subtitle here", category: "notused", score: 1000, num_comments: 50, stickied: false, created_utc: Date().timeIntervalSince1970 - 100, preview: nil, is_original_content: false, spoiler: false, replies: nil)
+//    ]
+    
+    
+     let library = [
+         Album(title: "Yellow Submarine", songList: ["Royalty-Free1","Royalty-Free2"], artist: "The Beatles", genreTags: ["Rock"], id: "0", description: "Yellow Submarine is the tenth studio album by English rock band the Beatles.\nIt was released on 13 January 1969 in the United States and on 17 January in\nthe United Kingdom.", selftext_html: nil, coverImgName: "a1cover", subtitle: "The Beatles", category: "notused", score: 1000, num_comments: 50, stickied: false, created_utc: Date().timeIntervalSince1970 - 100, preview: nil, is_original_content: false, spoiler: false, replies: nil),
+
+         Album(title: "A Head Full of Dreams", songList: ["Royalty-Free2","Royalty-Free3"], artist: "Coldplay", genreTags: ["Pop","Alternative/Indie"], id: "1", description: "A Head Full of Dreams is the seventh studio album by the British rock band Coldplay.\nIt was released on 4 December 2015, by Parlophone in the United Kingdom, and by\nAtlantic Records in the United States.", selftext_html: nil, coverImgName: "a2cover", subtitle: "Coldplay", category: "notused", score: 1000, num_comments: 50, stickied: false, created_utc: Date().timeIntervalSince1970 - 100, preview: nil, is_original_content: false, spoiler: false, replies: nil),
+         
+         Album(title: "Hotel California", songList: ["Royalty-Free3","Royalty-Free4"], artist: "The Eagles", genreTags: ["Rock"], id: "2", description: "Hotel California is the fifth studio album by American rock band the Eagles. The album\nwas recorded by Bill Szymczyk at the Criteria and Record Plant studios between March\nand October 1976, and then released on Asylum in December.", selftext_html: nil, coverImgName: "a3cover", subtitle: "The Eagles", category: "notused", score: 1000, num_comments: 50, stickied: false, created_utc: Date().timeIntervalSince1970 - 100, preview: nil, is_original_content: false, spoiler: false, replies: nil)
+     ]
     
     var body: some View {
         List {
