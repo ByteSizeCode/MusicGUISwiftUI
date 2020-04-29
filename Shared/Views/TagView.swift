@@ -2,7 +2,7 @@
 //  TagView.swift
 //  MusicGUISwiftUI
 //
-//  Loosely based on code created by Carson Katri on 7/31/19.
+//  Based on code created by Carson Katri on 7/31/19.
 //
 //  Code modified by Isaac Raval on 4/28/20.
 //  Copyright © 2020 Isaac Raval. All rights reserved.
@@ -11,9 +11,9 @@
 import SwiftUI
 
 struct TagView: View {
-    let flairs: [String]
+    let genreTage: [String]
     
-    func flair(_ name: String) -> some View {
+    func tag(_ name: String) -> some View {
         Text(name)
             .font(.caption)
             .foregroundColor(.primary)
@@ -24,17 +24,17 @@ struct TagView: View {
     
     var body: some View {
         HStack {
-            ForEach(flairs, id: \.self) {
-                self.flair($0)
+            ForEach(genreTage, id: \.self) {
+                self.tag($0)
             }
         }
     }
 }
 
 #if DEBUG
-struct FlairView_Previews: PreviewProvider {
+struct TagView_Previews: PreviewProvider {
     static var previews: some View {
-        TagView(flairs: ["Hello", "World"])
+        TagView(genreTage: ["Hello", "World"])
     }
 }
 #endif

@@ -26,7 +26,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSToolbarDelegate, NSTextFie
             backing: .buffered, defer: false)
         window.center()
         window.setFrameAutosaveName("Main Window")
-        window.title = "Reddit"
+        window.title = "MusicGUISwiftUI"
 
         window.contentView = NSHostingView(rootView: ContentView().environmentObject(state))
         
@@ -47,12 +47,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSToolbarDelegate, NSTextFie
         
         let toolbarItem = NSToolbarItemGroup(itemIdentifier: itemIdentifier)
 
-        let field = NSTextField(string: state.category)
-        field.placeholderString = "Jump to a file"
-        field.heightAnchor.constraint(equalToConstant: 22).isActive = true
-        field.delegate = self
-        let fieldItem = NSToolbarItem(itemIdentifier: NSToolbarItem.Identifier(rawValue: "category.search.bar"))
-        fieldItem.view = field
+//        let field = NSTextField(string: state.category)
+//        field.placeholderString = "Jump to a file"
+//        field.heightAnchor.constraint(equalToConstant: 22).isActive = true
+//        field.delegate = self
+//        let fieldItem = NSToolbarItem(itemIdentifier: NSToolbarItem.Identifier(rawValue: "category.search.bar"))
+//        fieldItem.view = field
         
         let text = NSTextField(string: "Category ")
         text.isBezeled = false
@@ -66,7 +66,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSToolbarDelegate, NSTextFie
         let segmentedItem = NSToolbarItem()
         segmentedItem.view = segmentedControl
         
-        toolbarItem.subitems = [labelItem, fieldItem, segmentedItem]
+        toolbarItem.subitems = [labelItem, segmentedItem]
 
         return toolbarItem
     }

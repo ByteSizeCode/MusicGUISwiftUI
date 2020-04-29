@@ -1,39 +1,41 @@
 //
-//  Post.swift
-//  Reddit
+//  Album.swift
+//  MusicGUISwiftUI
 //
-//  Created by Carson Katri on 7/21/19.
-//  Copyright © 2019 Carson Katri. All rights reserved.
+//  File origionally created by Carson Katri on 7/31/19.
+//
+//  Code modified by Isaac Raval on 4/28/20.
+//  Copyright © 2020 Isaac Raval. All rights reserved.
 //
 
 import Foundation
 
-/// A post from the Reddit API
-struct Post: Decodable, Identifiable {
+struct Album: Decodable, Identifiable {
     let title: String
-    let name: String
+    let songList:[String]
+    let artist: String
+    let genreTags: [String]
     let id: String
-    /// The body of the post
-    let selftext: String
+    
+    /// Extra, unused
+    let description: String
     let selftext_html: String?
-    let thumbnail: String
+    let coverImgName: String
     let subtitle: String
-    let author: String
+    
     let category: String
     let score: Int
     let num_comments: Int
     let stickied: Bool
     let created_utc: Double
     let preview: Preview?
-    
-    let tags: [String]
     let is_original_content: Bool
     let spoiler: Bool
     
     var flairs: [String] {
         var res: [String] = []
-        if !tags.isEmpty {
-            res = tags
+        if !genreTags.isEmpty {
+            res = genreTags
         }
         if is_original_content {
             res.append("Origional")
@@ -63,12 +65,3 @@ struct Post: Decodable, Identifiable {
         }
     }
 }
-
-#if DEBUG
-extension Post {
-    /// Used to create a Post for example Debug purposes
-    static var example: Self {
-        return Post(title: "Hello World | This is secondary text", name: "hello-world", id: "hw", selftext: "This is some body content. Blah blah\nblah blah blah", selftext_html: nil, thumbnail: "blahblah", subtitle: "", author: "me", category: "swift", score: 1000, num_comments: 50, stickied: true, created_utc: Date().timeIntervalSince1970 - 100, preview: nil, tags: ["Hello World"], is_original_content: true, spoiler: false, replies: nil)
-    }
-}
-#endif

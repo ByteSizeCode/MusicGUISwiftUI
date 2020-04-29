@@ -1,18 +1,20 @@
 //
 //  SortBy.swift
-//  Reddit
+//  MusicGUISwiftUI
 //
-//  Created by Carson Katri on 7/21/19.
-//  Copyright © 2019 Carson Katri. All rights reserved.
+//  File origionally created by Carson Katri on 7/31/19.
+//
+//  Code modified by Isaac Raval on 4/28/20.
+//  Copyright © 2020 Isaac Raval. All rights reserved.
 //
 
 import Foundation
 
 /// Sorting method for Reddit API
 enum SortBy: String, CaseIterable {
-    case hot
-    case new
-    case controversial
-    case top
-    case rising
+    case All
+    case Pop
+    case Classical
+    case Rock
+    case Other
 }

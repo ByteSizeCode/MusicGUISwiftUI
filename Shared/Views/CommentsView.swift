@@ -15,7 +15,7 @@
 //    let post: Post
 //    
 //    var noComments: some View {
-//        Text("😞 No comments...")
+//        Text("No comments...")
 //            .frame(height: nil)
 //    }
 //    

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B533A68522F2533800FD3FB2"
-               BuildableName = "SwiftUI-StarterKit.app"
-               BlueprintName = "SwiftUI-StarterKit-macOS"
-               ReferencedContainer = "container:SwiftUI-StarterKit.xcodeproj">
+               BuildableName = "MusicGUISwiftUI.app"
+               BlueprintName = "MusicGUISwiftUI-macOS"
+               ReferencedContainer = "container:MusicGUISwiftUI.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B533A68522F2533800FD3FB2"
-            BuildableName = "SwiftUI-StarterKit.app"
-            BlueprintName = "SwiftUI-StarterKit-macOS"
-            ReferencedContainer = "container:SwiftUI-StarterKit.xcodeproj">
+            BuildableName = "MusicGUISwiftUI.app"
+            BlueprintName = "MusicGUISwiftUI-macOS"
+            ReferencedContainer = "container:MusicGUISwiftUI.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B533A68522F2533800FD3FB2"
-            BuildableName = "SwiftUI-StarterKit.app"
-            BlueprintName = "SwiftUI-StarterKit-macOS"
-            ReferencedContainer = "container:SwiftUI-StarterKit.xcodeproj">
+            BuildableName = "MusicGUISwiftUI.app"
+            BlueprintName = "MusicGUISwiftUI-macOS"
+            ReferencedContainer = "container:MusicGUISwiftUI.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

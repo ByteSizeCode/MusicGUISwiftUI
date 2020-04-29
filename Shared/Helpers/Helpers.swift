@@ -15,6 +15,16 @@ func timeSince(_ interval: TimeInterval) -> String {
     return formatter.localizedString(for: Date(timeIntervalSince1970: interval), relativeTo: Date())
 }
 
+extension String {
+    func capitalizingFirstLetter() -> String {
+        return prefix(1).capitalized + dropFirst()
+    }
+
+    mutating func capitalizeFirstLetter() {
+        self = self.capitalizingFirstLetter()
+    }
+}
+
 /// `SwiftUI` compatibility
 #if os(macOS)
 extension Image {

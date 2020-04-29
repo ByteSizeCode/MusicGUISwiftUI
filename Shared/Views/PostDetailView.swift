@@ -1,25 +1,31 @@
 //
 //  PostDetailView.swift
-//  Reddit
+//  MusicGUISwiftUI
 //
-//  Created by Carson Katri on 7/22/19.
-//  Copyright © 2019 Carson Katri. All rights reserved.
+//  Loosely based on code created by Carson Katri on 7/31/19.
+//
+//  Code modified by Isaac Raval on 4/28/20.
+//  Copyright © 2020 Isaac Raval. All rights reserved.
 //
 
 import SwiftUI
-//import Request
 
 struct PostDetailView: View {
-    let post: Post
+    let album: Album
     
     var title: some View {
         let vstack = VStack(alignment: .leading) {
-            Text(post.author)
-                .font(.caption)
-                .opacity(0.75)
-            Text(post.title)
+            
+            Image(album.coverImgName)
+                .resizable()
+                .frame(width: 100, height: 100)
+            
+            Text(album.title)
                 .font(.title)
                 .bold()
+            Text(album.artist)
+                .font(.caption)
+                .opacity(0.75)
         }
         #if os(iOS)
         return vstack
@@ -42,7 +48,7 @@ struct PostDetailView: View {
 //                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: Alignment.topLeading)
 //            }
             // Title
-            if post.selftext == "" {
+            if album.description == "" {
 //                NavigationLink(destination: WebView(url: URL(string: post.subtitle)!)) {
 //                    title
 //                }
@@ -50,27 +56,19 @@ struct PostDetailView: View {
                 title
             }
             // Body
-            if post.selftext != "" {
-                Text(post.selftext)
+            if album.description != "" {
+                Text(album.description)
             }
-            if post.flairs.count > 0 {
-                FlairView(flairs: post.flairs)
+            if album.flairs.count > 0 {
+                TagView(genreTage: album.flairs)
             }
-            MetadataView(post: post, spaced: true)
+            MetadataView(album: album, spaced: true, songList: album.songList)
 //            CommentsView(post: post)
         }
         #if os(iOS)
-        return list.navigationBarTitle(Text("Category \(post.category)"), displayMode: .inline)
+        return list.navigationBarTitle(Text("Category \(album.category)"), displayMode: .inline)
         #else
         return list
         #endif
     }
 }
-
-#if DEBUG
-struct PostDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        PostDetailView(post: Post.example)
-    }
-}
-#endif
