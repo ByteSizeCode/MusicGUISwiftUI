@@ -1,0 +1,16 @@
+Follow these instructions to test the app:
+
+1) Replace list from AlbumNamesList.swift with the following:
+
+//Add cells here
+let library = [
+    Album(title: "Yellow Submarine", songList: ["Yellow Submarine", "Only a Northern Song", "All Together Now","Hey Bulldog","All You Need Is Love"], artist: "The Beatles", genreTags: ["Rock"], id: "0", description: "Yellow Submarine is the tenth studio album by English rock band the Beatles.\nIt was released on 13 January 1969 in the United States and on 17 January in\nthe United Kingdom.", selftext_html: nil, coverImgName: "a1cover", subtitle: "The Beatles", category: "notused", score: 1000, num_comments: 50, stickied: false, created_utc: Date().timeIntervalSince1970 - 100, preview: nil, is_original_content: false, spoiler: false, replies: nil),
+    Album(title: "A Head Full of Dreams", songList: ["Royalty-Free4", "Royalty-Free5"], artist: "Coldplay", genreTags: ["Pop","Alternative/Indie"], id: "1", description: "This is a description of album 2.\nAnd a new line here.", selftext_html: nil, coverImgName: "a2cover", subtitle: "Coldplay", category: "notused", score: 1000, num_comments: 50, stickied: false, created_utc: Date().timeIntervalSince1970 - 100, preview: nil, is_original_content: false, spoiler: false, replies: nil),
+     Album(title: "Hotel California", songList: ["Royalty-Free4", "Royalty-Free5"], artist: "The Eagles", genreTags: ["Rock"], id: "2", description: "This is a description of album 2.\nAnd a new line here.", selftext_html: nil, coverImgName: "a2cover", subtitle: "The Eagles", category: "notused", score: 1000, num_comments: 50, stickied: false, created_utc: Date().timeIntervalSince1970 - 100, preview: nil, is_original_content: false, spoiler: false, replies: nil)
+]
+
+2) Copy the cover images from this directory (a1cover.jpg and a2cover.png) to the Assets.xcassets folder found in the open Xcode project
+
+3) Add the song files to the directory "Music files," or- simply rename the royalty-free mp3 files already there to: Yellow Submarine, Only a Northern Song, All Together Now, Hey Bulldog, and All You Need Is Love
+
+4) Add missing data for other desired albums as necessary
