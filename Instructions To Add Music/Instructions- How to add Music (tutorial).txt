@@ -1,5 +1,9 @@
 Follow these instructions if you prefer the app to have real albums over generic ones:
 
+Overview: all songs are stored in "Music files" directory, all album covers are stored in Assets.xcassets. Copy the music and album cover files into the respective Xcode folders for each and update the parameters for the appropriate Album(:) object in library.
+
+Detailed Steps:
+
 1) Replace list from AlbumNamesList.swift with the following, or something like the following (the difference is the below has the albums' actual songs under the album "songList" parameters):
 
 //Add cells here
