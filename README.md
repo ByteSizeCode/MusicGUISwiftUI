@@ -1,6 +1,6 @@
 # MusicGUISwiftUI
 
-A music app for macOS designed wholey in SwiftUI.
+A music app for macOS designed wholly in SwiftUI.
 
 <img src="Screenshot/Screenshot.png" width="400" alt="drawing"/>
 
